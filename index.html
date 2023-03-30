@@ -27,8 +27,8 @@
                 <ul>
                     <li v-for="(item) in todos" >
                         <p @click="addRemoveTodo(item)" :style="{'text-decoration': item.done ? 'line-through' :''}">{{ item.todo }}</p>
-                        <span v-if:="item.done" @click="addRemoveTodo(item)" class="checked">&cross;</span>
-                        <span v-else @click="addRemoveTodo(item)" class="checked">&check;</span>
+                        <span v-if:="item.done" @click="addRemoveTodo(item)" class="checked">&check;</span>
+                        <span v-else @click="addRemoveTodo(item)" class="checked">&cross;</span>
                     </li>
                     
                 </ul>
