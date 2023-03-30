@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newTodoTxt: "",
             todos: [
                 {
                     todo: "Finire il progetto (abbiamo solo 3 giorni)",
@@ -19,4 +20,20 @@ createApp({
             ],
         };
     },
+    methods: {
+        addTodo() {
+
+            if (this.newTodoTxt.length > 0) {
+                this.todos.push({
+                    todo: this.newTodoTxt,
+                    done: false
+                });
+                this.newTodoTxt = "";
+            }
+        },
+        addRemoveTodo(itemIndex) {
+            let currItem = this.todos[itemIndex];
+            currItem.done = !currItem.done
+        }
+    }
 }).mount("#app");

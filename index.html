@@ -17,14 +17,17 @@
         <h1>Boolean To-Do List</h1>
         <div class="container">
             <section class="new-todo">
-                <label for="new-todo"></label>
-                <input placeholder="Inserire un nuovo to-do" type="text" name="new-todo" id="new-todo">
-                <button>+</button>
+                <div>
+                    <label for="new-todo"></label>
+                    <input @keyup.enter="addTodo" v-model.trim="newTodoTxt" placeholder="Inserire un nuovo to-do" type="text" name="new-todo" id="new-todo">
+                </div>
+                <button @click="addTodo">+</button>
             </section>
             <section class="todo-list">
                 <ul>
-                    <li v-for="item in todos" :style="{'text-decoration': item.done ? 'line-through' :''}">
+                    <li v-for="(item, index) in todos" :style="{'text-decoration': item.done ? 'line-through' :''}">
                         <p>{{ item.todo }}</p>
+                        <span @click="addRemoveTodo(index)" class="checked">&check;</span>
                     </li>
                     
                 </ul>

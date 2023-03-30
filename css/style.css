@@ -33,14 +33,23 @@ section.todo-list {
 }
 
 .new-todo button {
-    width: 40px;
+    width: 50px;
     height: 20px;
     border: 1px solid balck;
     border-radius: 18px;
     background-color: lightgreen;
+    cursor: pointer;
 }
 
 .todo-list li {
     padding: 1rem 0;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checked {
+    margin-right: 2rem;
+    cursor: pointer;
+    font-size: 1.4rem;
 }
