@@ -1,0 +1,46 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* LAYOUT */
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 3rem;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+section.new-todo {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    /* debug */
+    background-color: aqua;
+}
+section.todo-list {
+    padding: 2rem;
+    margin-top: 2rem;
+    /* debug */
+    background-color: aqua;
+}
+
+.new-todo button {
+    width: 40px;
+    height: 20px;
+    border: 1px solid balck;
+    border-radius: 18px;
+    background-color: lightgreen;
+}
+
+.todo-list li {
+    padding: 1rem 0;
+    
+}
