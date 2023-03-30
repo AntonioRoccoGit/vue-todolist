@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            checked: "'&check;'",
             newTodoTxt: "",
             todos: [
                 {
@@ -31,9 +32,12 @@ createApp({
                 this.newTodoTxt = "";
             }
         },
-        addRemoveTodo(itemIndex) {
-            let currItem = this.todos[itemIndex];
+        addRemoveTodo(item) {
+            let currItem = item;
             currItem.done = !currItem.done
+        },
+        crossFlag() {
+
         }
     }
 }).mount("#app");

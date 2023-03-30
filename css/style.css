@@ -48,6 +48,10 @@ section.todo-list {
     align-items: center;
 }
 
+.todo-list li p {
+    cursor: pointer;
+}
+
 .checked {
     margin-right: 2rem;
     cursor: pointer;
