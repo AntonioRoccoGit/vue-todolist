@@ -25,10 +25,10 @@
             </section>
             <section class="todo-list">
                 <ul>
-                    <li v-for="(item) in todos" >
+                    <li class="my-check" v-for="(item) in todos" >
                         <p @click="addRemoveTodo(item)" :style="{'text-decoration': item.done ? 'line-through' :''}">{{ item.todo }}</p>
-                        <span v-if:="item.done" @click="addRemoveTodo(item)" class="checked">&check;</span>
-                        <span v-else @click="addRemoveTodo(item)" class="checked">&cross;</span>
+                        <span v-if:="item.done" @click="addRemoveTodo(item)" class="flag checked">&check;</span>
+                        <span v-else @click="addRemoveTodo(item)" class="cross checked">&cross;</span>
                     </li>
                     
                 </ul>
