@@ -36,8 +36,5 @@ createApp({
             let currItem = item;
             currItem.done = !currItem.done
         },
-        crossFlag() {
-
-        }
     }
 }).mount("#app");
